@@ -54,6 +54,7 @@ module.exports = {
 
   /* 03.Menu */
   "menu.app": "Home",
+  "menu.electric": "Electric",
   "menu.dashboards": "Dashboards",
   "menu.dashboard": "Dashboard",
   "menu.default": "Default",
@@ -130,6 +131,7 @@ module.exports = {
   "dashboards.new-comments": "New Comments",
   "dashboards.sales": "Sales",
   "dashboards.week": "Payment this Week",
+  "dashboards.read": "Readings",
   "dashboards.orders": "Orders",
   "dashboards.refunds": "Refunds",
   "dashboards.schedule": "Schedule",
@@ -471,7 +473,9 @@ module.exports = {
   "form-components.radios": "Radios",
   "form-components.inline": "Inline",
   "form-components.react-select": "React Select",
+  "form-components.react-bill": "Electricity bill",
   "form-components.state-single": "State Single",
+  "form-components.select-tenant": "Select Tenant",
   "form-components.state-multiple": "State Multiple",
   "form-components.react-autosuggest": "React Autosuggest",
   "form-components.date-picker": "Date Picker",

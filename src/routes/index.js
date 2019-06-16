@@ -8,6 +8,7 @@ import Sidebar from 'Containers/Sidebar';
 import dashboards from './dashboards';
 import pages from './pages';
 import applications from './applications';
+import ui from './ui';
 
 import { connect } from 'react-redux';
 
@@ -24,6 +25,7 @@ class MainApp extends Component {
 							<Route path={`${match.url}/applications`} component={applications} />
 							<Route path={`${match.url}/dashboards`} component={dashboards} />
 							<Route path={`${match.url}/pages`} component={pages} />
+							<Route path={`${match.url}/ui`} component={ui} />
 							<Redirect to="/error" />
 						</Switch>
 					</div>

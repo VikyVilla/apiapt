@@ -29,7 +29,6 @@ import {
   Input
 } from "reactstrap";
 import Rating from "Components/Rating";
-import { SmallLineChart } from "Components/Charts";
 import {
   smallChartData1,
   smallChartData2,
@@ -53,6 +52,14 @@ import { BreadcrumbItems } from "Components/BreadcrumbContainer";
 
 import classnames from "classnames";
 
+const models =[
+{name: "Robert",flatDetails:"No 3,4th floor,D block",category:"Electricity",status: "Pending",assignedDate:"May 25 2019",completedDate:"May 30 2019",feedback:"Good work"},
+{name: "Johnson",flatDetails:"No 8,2th floor,E block",category:"Drainage",status: "Completed",assignedDate:"May 2 2019",completedDate:"May 3 2019",feedback:"Good work"},
+{name: "Clive",flatDetails:"No 5,2th floor,A block",category:"Security",status: "Pending",assignedDate:"Apr 25 2019",completedDate:"",feedback:"Good work"},
+{name: "Christoper",flatDetails:"No 2,6th floor,D block",category:"House keeping",status: "Completed",assignedDate:"Sep 5 2019",completedDate:"Sep 8 2019",feedback:"Good work"},
+{name: "Kevin",flatDetails:"No 1,3th floor,C block",category:"Laundry",status: "Pending",assignedDate:"Jun 25 2019",completedDate:"",feedback:"Good work"}
+
+];
 
 const selectData = [
   { label: "Photography", value: "Photography", key: 0 },
@@ -97,15 +104,36 @@ const dataTableColumns = [
     Cell: props => <p className="list-item-heading">{props.value}</p>
   },
   {
-    Header: "Salary",
-    accessor: "salary",
+    Header: "Flat details",
+    accessor: "flatDetails",
     Cell: props => <p className="text-muted">{props.value}</p>
   },
   {
     Header: "Category",
     accessor: "category",
     Cell: props => <p className="text-muted">{props.value}</p>
-  }
+  },
+  {
+    Header: "Status",
+    accessor: "status",
+    Cell: props => <p className="text-muted">{props.value}</p>
+  },
+
+  {
+    Header: "Assigned date",
+    accessor: "assignedDate",
+    Cell: props => <p className="text-muted">{props.value}</p>
+  },
+  {
+    Header: "Completed date",
+    accessor: "completedDate",
+    Cell: props => <p className="text-muted">{props.value}</p>
+  },
+  {
+    Header: "Feedback",
+    accessor: "feedback",
+    Cell: props => <p className="text-muted">{props.value}</p>
+  },
 ];
 
 export default class DetailsLayout extends Component {
@@ -282,7 +310,7 @@ export default class DetailsLayout extends Component {
   };
 
   render() {
-    return this.state.model == false ? (
+    return models == false ? (
       <div className="loading" />
     ) : (
 
@@ -304,7 +332,7 @@ export default class DetailsLayout extends Component {
             </CardTitle>
 
             <ReactTable
-              data= {this.state.model}
+              data= {models}
               columns={dataTableColumns}
               defaultPageSize={5}
               filterable={true}

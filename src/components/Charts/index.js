@@ -25,7 +25,7 @@ export const chartTooltipCustom = {
       label += Math.round(tooltipItem.yLabel * 100) / 100;
       return label + " Test";
     },
-    title: function (tooltipItem, data) { 
+    title: function (tooltipItem, data) {
       return tooltipItem[0].xLabel + " Test";
     }
   }
@@ -124,6 +124,7 @@ export class PolarShadow extends React.Component {
   }
 }
 
+/*************************************************************************/
 export class LineShadow extends React.Component {
   componentWillMount() {
     Chart.defaults.lineWithShadow = Chart.defaults.line;
@@ -143,6 +144,8 @@ export class LineShadow extends React.Component {
       }
     });
   }
+
+
 
   render() {
     return (

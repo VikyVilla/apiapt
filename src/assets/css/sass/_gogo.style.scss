@@ -141,7 +141,7 @@ body {
 }
 
 .fixed-background {
-  background: url("/assets/img/balloon.jpg") no-repeat center center fixed;
+  background: url("http://paulshi.com/daut/as/f/c/concept-abstract-building-architecture-stock-image-13876091-exploring-new-york-city-stunning-with-iac-regard-to-buildings_building-architecture-gallery_architecture_architectural-designer-salary-desig.jpg") no-repeat center center fixed;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -5562,6 +5562,7 @@ input:-webkit-autofill {
 
 /* 31.Authorization */
 .auth-card {
+  border-radius:20px;
   display: flex;
   flex-direction: row;
   @include depth(1);

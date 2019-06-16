@@ -302,6 +302,21 @@ class Sidebar extends Component {
                   <IntlMessages id="menu.rent" />
                 </NavLink>
               </NavItem>
+
+              <NavItem
+                className={classnames({
+                  active: ((this.state.selectedParentMenu == "ui" && this.state.viewingParentMenu == "") || this.state.viewingParentMenu == "ui")
+                })}
+              >
+                <NavLink
+                  to="/app/ui/electric"
+                  onClick={e => this.changeSelectedParentHasNoSubmenu(e, "ui")}
+                >
+                  <i className="iconsminds-flash-2" />{" "}
+                  <IntlMessages id="menu.electric" />
+                </NavLink>
+              </NavItem>
+
             </Nav>
 
 
@@ -354,6 +369,19 @@ class Sidebar extends Component {
                   <NavLink to="/app/applications/survey">
                     <i className="simple-icon-calculator" />{" "}
                     <IntlMessages id="menu.survey" />
+                  </NavLink>
+                </NavItem>
+              </Nav>
+
+              <Nav
+                className={classnames({
+                  "d-block": ((this.state.selectedParentMenu == "ui" && this.state.viewingParentMenu == "") || this.state.viewingParentMenu == "ui")
+                })}
+                data-parent="ui"
+              >
+                <NavItem>
+                  <NavLink to="/app/ui/electric">
+                    
                   </NavLink>
                 </NavItem>
               </Nav>

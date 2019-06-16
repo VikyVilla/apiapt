@@ -237,57 +237,6 @@ class TopNav extends Component {
 
         <div className="ml-auto">
           <div className="header-icons d-inline-block align-middle">
-
-
-
-            <div className="position-relative d-inline-block">
-              <UncontrolledDropdown className="dropdown-menu-right">
-                <DropdownToggle
-                  className="header-icon notificationButton"
-                  color="empty"
-                >
-                  <i className="simple-icon-bell" />
-                  <span className="count">3</span>
-                </DropdownToggle>
-                <DropdownMenu
-                  className="position-absolute mt-3 scroll"
-                  right
-                  id="notificationDropdown"
-                >
-                  <PerfectScrollbar
-                    options={{ suppressScrollX: true, wheelPropagation: false }}
-                  >
-                    {notifications.data.map((n, index) => {
-                      return (
-                        <div
-                          key={index}
-                          className="d-flex flex-row mb-3 pb-3 border-bottom"
-                        >
-                          <a href="/app/pages/details">
-                            <img
-                              src={n.image}
-                              alt="Notification"
-                              className="img-thumbnail list-thumbnail xsmall border-0 rounded-circle"
-                            />
-                          </a>
-                          <div className="pl-3 pr-2">
-                            <a href="/app/pages/details">
-                              <p className="font-weight-medium mb-1">
-                                {n.message}
-                              </p>
-                              <p className="text-muted mb-0 text-small">
-                                {n.date}
-                              </p>
-                            </a>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </PerfectScrollbar>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-            </div>
-
             <button
               className="header-icon btn btn-empty d-none d-sm-inline-block"
               type="button"
@@ -304,7 +253,7 @@ class TopNav extends Component {
           <div className="user d-inline-block">
             <UncontrolledDropdown className="dropdown-menu-right">
               <DropdownToggle className="p-0" color="empty">
-                <span className="name mr-1">Sarah Kortney</span>
+                <span className="name mr-1">Steve Jobs</span>
                 <span>
                   <img alt="Profile" src="/assets/img/profile-pic-l.jpg" />
                 </span>

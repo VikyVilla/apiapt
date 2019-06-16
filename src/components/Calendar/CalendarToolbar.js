@@ -12,7 +12,7 @@ export const CalendarToolbar = toolbar => {
     const goToCurrent = () => {
       toolbar.onNavigate("TODAY");
     };
-  
+
     const label = () => {
       const date = moment(toolbar.date);
       return (
@@ -22,13 +22,13 @@ export const CalendarToolbar = toolbar => {
         </span>
       );
     };
-  
+
     return (
       <div className="big-calendar-header">
         <div className="float-left">
           <label>{label()}</label>
         </div>
-  
+
         <div className="float-right">
           <div>
             <button
@@ -48,4 +48,3 @@ export const CalendarToolbar = toolbar => {
       </div>
     );
   };
-  

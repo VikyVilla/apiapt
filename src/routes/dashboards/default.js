@@ -57,13 +57,8 @@ import "react-circular-progressbar/dist/styles.css";
 import "react-perfect-scrollbar/dist/css/styles.css";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import "react-table/react-table.css";
-
-// import eventsData from "Data/events.json";
 import ticketsData from "Data/tickets.json";
-// import logsData from "Data/logs.json";
-// import productsData from "Data/products.json";
-// import profileStatusData from "Data/dashboard.profile.status.json";
-// import cakeData from "Data/dashboard.cakes.json";
+
 
 Chart.defaults.global.plugins.datalabels.display = false;
 
@@ -107,13 +102,8 @@ const dataTableColumns = [
   }
 ];
 
-// const recentOrders = productsData.data.slice(0, 6);
 const tickets = ticketsData.data;
-  // const events = eventsData.data;
-  // const logs = logsData.data;
-// const dataTableData = productsData.data.slice(0, 12);
-// const profileStatuses = profileStatusData.data;
-// const cakes = cakeData.data;
+
 
 BigCalendar.momentLocalizer(moment);
 
@@ -284,8 +274,7 @@ class DefaultDashboard extends Component {
                     {this.state.model.map((order, index) => {
                       return (
                         <div key={index} className="d-flex flex-row mb-3">
-                          <NavLink
-                            to=""
+                          <p
                             className="d-block position-relative"
                           >
                             <img
@@ -301,10 +290,10 @@ class DefaultDashboard extends Component {
                             >
                             BENDING
                             </Badge>
-                          </NavLink>
+                          </p>
 
                           <div className="pl-3 pt-2 pr-2 pb-2">
-                            <NavLink to="">
+
                               <p className="list-item-heading">{order.category}</p>
                               <div className="pr-4">
                               <p className="text-muted mb-1 text-small">
@@ -317,7 +306,7 @@ class DefaultDashboard extends Component {
                               <div className="text-primary text-small font-weight-medium d-none d-sm-block">
                                 {order.date}
                               </div>
-                            </NavLink>
+
                           </div>
                         </div>
                       );
@@ -397,23 +386,23 @@ class DefaultDashboard extends Component {
                           key={index}
                           className="d-flex flex-row mb-3 pb-3 border-bottom"
                         >
-                          <NavLink to="">
+                        
                             <img
                               src={ticket.thumb}
                               alt={ticket.label}
                               className="img-thumbnail border-0 rounded-circle list-thumbnail align-self-center xsmall"
                             />
-                          </NavLink>
+
 
                           <div className="pl-3 pr-2">
-                            <NavLink to="">
+
                               <p className="font-weight-medium mb-0 ">
                                 {ticket.label}
                               </p>
                               <p className="text-muted mb-0 text-small">
                                 {ticket.date}
                               </p>
-                            </NavLink>
+
                           </div>
                         </div>
                       );
